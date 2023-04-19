@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityParImpar">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerView7"
+                android:name="com.example.appmatematicadaniel.Fragment_publicidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvParImpar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PAR O IMPAR"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="#03A9F4"
+                android:textSize="30sp"
+                android:textStyle="bold|italic" />
+
+            <ImageView
+                android:id="@+id/ivParImpar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                app:srcCompat="@drawable/parimpar" />
+
+            <TextView
+                android:id="@+id/tvNParImpar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Introduce un número que quieras saber si es par o impar:" />
+
+            <EditText
+                android:id="@+id/etN1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:ems="10"
+                android:inputType="number"
+                android:minHeight="48dp"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="¿Cómo crees que será, par o impar?" />
+
+            <RadioGroup
+                android:id="@+id/rgParImpar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbPar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:text="Par" />
+
+                <RadioButton
+                    android:id="@+id/rbImpar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:text="Impar" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/bSaberParImpar"
+                style="@android:style/Widget.Holo.Light.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:onClick="ParImpar"
+                android:text="Averiguar " />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="30dp" />
+
+            <TextView
+                android:id="@+id/tvResultadoParImpar"
+                android:layout_width="match_parent"
+                android:layout_height="86dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="20dp" />
+
+            <Button
+                android:id="@+id/bVolverParImpar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:onClick="volver"
+                android:text="Volver" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

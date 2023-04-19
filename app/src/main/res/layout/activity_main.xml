@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerView2"
+                android:name="com.example.appmatematicadaniel.Fragment_publicidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:layout="@layout/fragment_publicidad" />
+
+            <TextView
+                android:id="@+id/tvBienvenida"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#EFCFB3"
+                android:text="@string/tvBienvenida"
+                android:textAlignment="center"
+                android:textColor="#DF1313"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivMain"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                app:srcCompat="@drawable/mate2" />
+
+            <EditText
+                android:id="@+id/etValor1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:ems="10"
+                android:hint="@string/tvValor1"
+                android:inputType="number"
+                android:minHeight="48dp"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/etValor2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:ems="10"
+                android:hint="@string/tvValor2"
+                android:inputType="number"
+                android:minHeight="48dp"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <Button
+                android:id="@+id/bCalc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:onClick="calculadora"
+                android:text="@string/bCalc" />
+
+            <Button
+                android:id="@+id/bNumRand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:onClick="random"
+                android:text="@string/bNumRand" />
+
+            <Button
+                android:id="@+id/bParImpar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:onClick="parImpar"
+                android:text="@string/bParImpar" />
+
+            <Button
+                android:id="@+id/bPrimo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:onClick="primos"
+                android:text="@string/bPrimo" />
+
+            <Button
+                android:id="@+id/bFormulas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:onClick="formulas"
+                android:text="@string/bFormulas" />
+
+            <Button
+                android:id="@+id/bAcercaDe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:onClick="acercaDe"
+                android:text="@string/bAcercaDe" />
+
+            <TextView
+                android:id="@+id/tvContraseñaM"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:background="#000000"
+                android:text="@string/tvContraseñaM"
+                android:textColor="#FFFFFF"
+                android:textStyle="italic" />
+
+            <EditText
+                android:id="@+id/etUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:ems="10"
+                android:hint="@string/etUsuario"
+                android:inputType="textPersonName"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:ems="10"
+                android:hint="@string/etContraseña"
+                android:inputType="textPassword"
+                android:minHeight="48dp" />
+
+            <Button
+                android:id="@+id/bZonaPrivada"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:onClick="zonaPrivada"
+                android:text="@string/bZonaPrivada" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="86dp" />
+
+            <Button
+                android:id="@+id/bSalir"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="#FF0000"
+                android:onClick="salir"
+                android:text="@string/bSalir"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold|italic" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

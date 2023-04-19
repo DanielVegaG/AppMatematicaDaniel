@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityFormulasMatematicas">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerView4"
+                android:name="com.example.appmatematicadaniel.Fragment_publicidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvTituloFormulas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="FÓRMULAS MATEMÁTICAS"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="#03A9F4"
+                android:textSize="30sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/tvOnForms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Enciende este botón para poder ver las fórmulas:" />
+
+            <ToggleButton
+                android:id="@+id/tbForms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:onClick="ocultarMostrarTodo"
+                android:text="ToggleButton" />
+
+            <LinearLayout
+                android:id="@+id/lForms"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvOnAVF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:text="Marca las casillas de las fórmulas que quieras ver"
+                    android:textAlignment="center" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cbArea"
+                        android:layout_width="131dp"
+                        android:layout_height="wrap_content"
+                        android:onClick="mostrarAreas"
+                        android:text="Áreas" />
+
+                    <CheckBox
+                        android:id="@+id/cbVolumenes"
+                        android:layout_width="135dp"
+                        android:layout_height="wrap_content"
+                        android:onClick="mostrarVolumenes"
+                        android:text="Volúmenes" />
+
+                    <CheckBox
+                        android:id="@+id/cbFunciones"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:onClick="mostrarFormulas"
+                        android:text="Funciones" />
+                </LinearLayout>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TableLayout
+                            android:id="@+id/tlAreas"
+                            android:layout_width="409dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:visibility="gone">
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/tvAreas"
+                                    android:layout_width="96dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Áreas:"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                                    android:textSize="16sp" />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/tvACuad"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="Cuadrado:"
+                                    android:textAlignment="center" />
+
+                                <TextView
+                                    android:id="@+id/tvACuadrado"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="Lado * Lado"
+                                    android:textAlignment="center" />
+
+                                <ImageView
+                                    android:id="@+id/imageView5"
+                                    android:layout_width="96dp"
+                                    android:layout_height="102dp"
+                                    app:srcCompat="@drawable/cuadrad" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/tvARect"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="Rectángulo"
+                                    android:textAlignment="center" />
+
+                                <TextView
+                                    android:id="@+id/tvARectangulo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="Base * Altura"
+                                    android:textAlignment="center" />
+
+                                <ImageView
+                                    android:id="@+id/imageView6"
+                                    android:layout_width="218dp"
+                                    android:layout_height="92dp"
+                                    app:srcCompat="@drawable/rectangulo" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/tvATria"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="Triángulo:"
+                                    android:textAlignment="center" />
+
+                                <TextView
+                                    android:id="@+id/tvATriangulo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="(Base * Altura)/2"
+                                    android:textAlignment="center" />
+
+                                <ImageView
+                                    android:id="@+id/imageView7"
+                                    android:layout_width="203dp"
+                                    android:layout_height="71dp"
+                                    app:srcCompat="@drawable/triangulo" />
+                            </TableRow>
+
+                            <TableRow
+                                android:id="@+id/trBotónA"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageButton
+                                    android:id="@+id/imageButton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="40dp"
+                                    android:layout_marginRight="40dp"
+                                    android:layout_weight="1"
+                                    android:onClick="másÁreas"
+                                    app:srcCompat="@android:drawable/ic_menu_search"
+                                    tools:ignore="SpeakableTextPresentCheck" />
+                            </TableRow>
+                        </TableLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TableLayout
+                            android:id="@+id/tlVolumenes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:visibility="gone">
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/tvVolumenes"
+                                    android:layout_width="96dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Volúmenes:"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                                    android:textSize="16sp" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/tvVCub"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Cubo"
+                                    android:textAlignment="center" />
+
+                                <TextView
+                                    android:id="@+id/tvVCubo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Arista^3"
+                                    android:textAlignment="center" />
+
+                                <ImageView
+                                    android:id="@+id/imageView8"
+                                    android:layout_width="149dp"
+                                    android:layout_height="104dp"
+                                    app:srcCompat="@drawable/cubo" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/tvAPris"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Prisma:"
+                                    android:textAlignment="center" />
+
+                                <TextView
+                                    android:id="@+id/tvVPrisma"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Área de la base * Altura"
+                                    android:textAlignment="center" />
+
+                                <ImageView
+                                    android:id="@+id/imageView9"
+                                    android:layout_width="149dp"
+                                    android:layout_height="104dp"
+                                    app:srcCompat="@drawable/prisma" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/tvVEs"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Esfera:"
+                                    android:textAlignment="center" />
+
+                                <TextView
+                                    android:id="@+id/tvVEsfera"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="4 * pi * Radio^3"
+                                    android:textAlignment="center" />
+
+                                <ImageView
+                                    android:id="@+id/imageView10"
+                                    android:layout_width="149dp"
+                                    android:layout_height="104dp"
+                                    app:srcCompat="@drawable/esfera" />
+                            </TableRow>
+
+                            <TableRow
+                                android:id="@+id/trBotónB"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageButton
+                                    android:id="@+id/imageButton1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="40dp"
+                                    android:layout_marginRight="40dp"
+                                    android:layout_weight="1"
+                                    android:onClick="másVolúmenes"
+                                    app:srcCompat="@android:drawable/ic_menu_search"
+                                    tools:ignore="SpeakableTextPresentCheck" />
+                            </TableRow>
+                        </TableLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+
+                <TableLayout
+                    android:id="@+id/tlFormulas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:visibility="gone">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tvFunciones"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Funciones y ecuaciones"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                            android:textSize="16sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/txFEcSegundoGrado"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="x=(-b ± sqrt(b^2-4ac))/2a" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tvFEcuacionCuadrada"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ax^2 + bx + c = 0" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tvFDiscriminante"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Discriminante = b^2 - 4ac" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/trBotónF"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageButton
+                            android:id="@+id/imageButton2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginRight="40dp"
+                            android:layout_weight="1"
+                            android:onClick="másFórmulas"
+                            app:srcCompat="@android:drawable/ic_menu_search"
+                            tools:ignore="SpeakableTextPresentCheck" />
+                    </TableRow>
+
+                </TableLayout>
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/bVolverForms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:minHeight="48dp"
+                android:onClick="volver"
+                app:srcCompat="?attr/actionModeCloseDrawable"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

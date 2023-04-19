@@ -1,0 +1,28 @@
+<resources>
+    <string name="nombreApp">AppMatemáticaDaniel</string>
+
+    <!--palabras del main que se traducen-->
+    <string name="tvBienvenida">¡Bienvenido!</string>
+    <string name="tvValor1">Valor 1</string>
+    <string name="tvValor2">Valor2</string>
+    <string name="bCalc">Calculadora</string>
+    <string name="bNumRand">Generador números aleatorios</string>
+    <string name="bParImpar">Par o impar</string>
+    <string name="bPrimo">Número primo</string>
+    <string name="bFormulas">Fórmulas matemáticas</string>
+    <string name="bAcercaDe">Acerca de</string>
+    <string name="bSalir">Salir</string>
+    <string name="bZonaPrivada">Zona privada</string>
+    <string name="tvContraseñaM">Introduce el usuario y contraseña:</string>
+    <string name="etUsuario">Usuario</string>
+    <string name="etContraseña">Contraseña</string>
+
+    <!--palabras del spinner-->
+    <string-array name="tiempo">
+        <item>Soleado</item>
+        <item>Nublado</item>
+        <item>Lloviendo</item>
+        <item>Granizando</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityZonaPrivada">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerView5"
+                android:name="com.example.appmatematicadaniel.Fragment_publicidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvActivarZonaPrivadaTB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Activa este botón para ver la información de la zona privada:"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <ToggleButton
+                android:id="@+id/tbZonaPrivada"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:onClick="verToggleButton"
+                android:text="ToggleButton"
+                android:textOff="@android:string/no"
+                android:textOn="@android:string/yes" />
+
+            <LinearLayout
+                android:id="@+id/llZonaPrivadaSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <Switch
+                    android:id="@+id/swZonaPrivada"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:minHeight="48dp"
+                    android:onClick="verSwitch"
+                    android:text="Por motivos de seguridad es necesario activar este también:" />
+
+                <LinearLayout
+                    android:id="@+id/llZonaPrivada"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tvZonaPrivada"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="¡¡Felicidades!! Has logrado acceder a la zona privada"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="#000000"
+                        android:textSize="30sp"
+                        android:textStyle="bold|italic" />
+
+                    <ImageView
+                        android:id="@+id/ivPrivada"
+                        android:layout_width="match_parent"
+                        android:layout_height="292dp"
+                        app:srcCompat="@drawable/lock" />
+
+                    <TextView
+                        android:id="@+id/tvMiNota"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="En esta aplicación la nota será de:" />
+
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="20dp">
+
+                        <RadioButton
+                            android:id="@+id/rb10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:onClick="tenerUn10"
+                            android:text="Un 10" />
+
+                        <RadioButton
+                            android:id="@+id/rbOtro10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:onClick="tenerUn10"
+                            android:text="Otro 10" />
+
+                        <RadioButton
+                            android:id="@+id/rbSuspenso"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:onClick="tenerUn10"
+                            android:text="Un suspenso" />
+
+                        <RadioButton
+                            android:id="@+id/rbObvio10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:onClick="tenerUn10"
+                            android:text="Obviamente un 10" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tvTiempo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="¿Qué tiempo hace hoy?" />
+
+                    <Spinner
+                        android:id="@+id/spinnerTiempo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:entries="@array/tiempo"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                    <TextView
+                        android:id="@+id/tvNotas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="¿Qué tal las notas del resto de la clase?" />
+
+                    <Spinner
+                        android:id="@+id/spinnerNotas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/ibPrivada"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="10dp"
+                android:baselineAlignBottom="false"
+                android:minHeight="48dp"
+                android:onClick="volver"
+                android:textAlignment="gravity"
+                android:visibility="gone"
+                app:srcCompat="?attr/homeAsUpIndicator"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

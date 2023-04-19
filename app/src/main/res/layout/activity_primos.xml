@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityPrimos">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerView8"
+            android:name="com.example.appmatematicadaniel.Fragment_publicidad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvNPrimos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Números primos"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#03A9F4"
+            android:textSize="30sp"
+            android:textStyle="bold|italic" />
+
+        <ImageView
+            android:id="@+id/ivPrimos"
+            android:layout_width="match_parent"
+            android:layout_height="185dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            app:srcCompat="@drawable/numerosprimos" />
+
+        <TextView
+            android:id="@+id/tvIntroducirN"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Introduce tu número que quieras saber si es primo o no" />
+
+        <EditText
+            android:id="@+id/etNPrimo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ems="10"
+            android:hint="Número"
+            android:inputType="number"
+            android:minHeight="48dp"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
+
+        <Button
+            android:id="@+id/bNPrimo"
+            style="@android:style/Widget.Holo.Light.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:onClick="Primos"
+            android:text="Averiguar si es primo" />
+
+        <TextView
+            android:id="@+id/etResultadoPrimos"
+            android:layout_width="match_parent"
+            android:layout_height="83dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp" />
+
+        <Button
+            android:id="@+id/bVolverPrimo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:onClick="volver"
+            android:text="Volver" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

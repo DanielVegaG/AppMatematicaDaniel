@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nombreApp">AppMatematicaDaniel</string>
+    <string name="tvBienvenida">¡Bienveníu!</string>
+    <string name="bCalc">Calculadora</string>
+    <string name="bNumRand">Xenerador númberos aleatorios</string>
+    <string name="bParImpar">Par o impar</string>
+    <string name="bPrimo">Númbero primu</string>
+    <string name="bSalir">Salir</string>
+    <string name="bFormulas">Fórmules matemátiques</string>
+    <string name="bAcercaDe">Alrodiu de</string>
+    <string name="bZonaPrivada">Zona privada</string>
+    <string name="tvContraseñaM">Introduz la contraseña</string>
+    <string name="tvValor1">Valor1</string>
+    <string name="tvValor2">Valor2</string>
+    <string name="etUsuario">Usuariu</string>
+    <string name="etContraseña">Contraseña</string>
+</resources>

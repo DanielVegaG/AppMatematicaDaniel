@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityNumRandom">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerView6"
+                android:name="com.example.appmatematicadaniel.Fragment_publicidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvTitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Este es un generador de números aleatorios entre dos números (ambos incluídos)"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="#03A9F4"
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+
+            <ImageView
+                android:id="@+id/ivAleatorio"
+                android:layout_width="match_parent"
+                android:layout_height="177dp"
+                app:srcCompat="@drawable/random" />
+
+            <EditText
+                android:id="@+id/etNInicial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:ems="10"
+                android:hint="Número inicial"
+                android:inputType="number"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/etNFinal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:ems="10"
+                android:hint="Número final"
+                android:inputType="number"
+                android:minHeight="48dp"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <Button
+                android:id="@+id/bGenerar"
+                style="@android:style/Widget.Holo.Light.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:onClick="aleatorio"
+                android:text="Generar" />
+
+            <TextView
+                android:id="@+id/tvRes"
+                android:layout_width="match_parent"
+                android:layout_height="187dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/bVolverRandom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:onClick="volver"
+                android:text="Volver" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

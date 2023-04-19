@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment_publicidad">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:background="#F6E42C"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvPublicidad"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="75"
+            android:text="@android:string/yes"
+            android:textAlignment="center"
+            android:textColor="#33691E" />
+
+        <ImageButton
+            android:id="@+id/ibPublicidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:backgroundTint="#F6E42C"
+            android:src="@android:drawable/btn_dialog"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+    </LinearLayout>
+</FrameLayout>

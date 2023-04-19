@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_aleatorios"
+        android:title="@string/bNumRand" />
+    <item
+        android:id="@+id/menu_forms"
+        android:title="@string/bFormulas" />
+    <item
+        android:id="@+id/menu_acercaDe"
+        android:title="@string/bAcercaDe" />
+    <item
+        android:id="@+id/menu_salir"
+        android:title="@string/bSalir" />
+</menu>

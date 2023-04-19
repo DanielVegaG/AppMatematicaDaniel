@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".ActivityAcercaDe">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerView3"
+            android:name="com.example.appmatematicadaniel.Fragment_publicidad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="match_parent"
+            android:layout_height="226dp"
+            android:padding="10dp"
+            app:srcCompat="@drawable/si" />
+
+        <TextView
+            android:id="@+id/tvNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:background="#FFE7A9"
+            android:text="Daniel Vega González"
+            android:textAlignment="center"
+            android:textColor="#0C3397"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvCorreo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="40dp"
+            android:background="#06B310"
+            android:text="oum45549@educastur.es"
+            android:textAlignment="center"
+            android:textColor="#400F2C"
+            android:textSize="21sp" />
+
+        <Button
+            android:id="@+id/bVolverAcercaDe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:onClick="volver"
+            android:text="Volver" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
